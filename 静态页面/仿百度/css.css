@@ -1,0 +1,114 @@
+*{
+  margin:0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  text-align: center;
+  min-width: 768px;
+  min-height: 100%;
+
+}
+
+a:visited{
+  color: black;
+}
+
+.header{
+  height: 34px;
+  border-bottom: 1px solid #eee;
+
+}
+
+.header a{
+  display: inline-block;
+  height: 100%;
+  font-size: 12px;
+  padding-top: 10px;
+  margin-left: 9px;
+}
+
+
+.top-right:last-child:hover{
+    color: #555;
+}
+
+.top-left{
+  margin-left:20px;
+  height: 100%;
+  float: left;
+}
+
+.top-right{
+  height: 100%;
+  float: right;
+}
+
+#moreproduct{
+  color: white;
+  background: #317EF3;
+  text-decoration: none;
+  padding-right: 9px;
+  padding-left: 9px;
+}
+
+#moreproduct:hover{
+  background: #ddd;
+  color: #333;
+}
+
+.body a img{ max-width: 290px; margin-top: 160px;}
+
+
+.body form input{
+  width: 590px;
+  height: 42px;
+  border: 1px solid #bbb;
+  border-right: none;
+  text-indent: 13px;
+}
+
+.body form input:focus{
+  outline: none;
+  border: 1px solid #3E8BF7;
+  border-right: none;
+}
+
+.body form button{
+  font-size: 17px;
+  height: 42px;
+  width: 100px;
+  border:none;
+  color: white;
+  background: #38F;
+}
+
+.body form button:hover{
+  background: #18F;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.1);
+  transition: 300ms;
+}
+
+.body form button:active{
+  outline: none;
+  background: #17F;
+
+  box-shadow: none;
+}
+
+
+
+.footer{
+  position: absolute;
+  bottom:24px;
+  width: 100%;
+  min-width: 768px;
+}
+
+@media screen and (max-height:500px){
+
+  .footer{
+    top:450px;
+  }
+}

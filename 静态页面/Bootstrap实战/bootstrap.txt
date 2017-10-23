@@ -1,0 +1,25 @@
+栅格系统 12格
+col-md col-sm col-xs
+
+表单
+form-group                      用在<form>
+
+has-error
+has-warning                     高亮颜色
+has-success
+
+
+form-control                    用在<input>和尚<select>上 添加了一些很优雅的效果
+
+
+form-inline
+
+
+div class="input-group">
+  <div class="input-group-addon">asd</div>
+<input type="text" class="form-control">
+</div>
+</div>                          在前面加一个asd然后后面可以填东西
+
+
+

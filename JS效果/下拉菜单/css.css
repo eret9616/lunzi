@@ -1,0 +1,41 @@
+*{padding: 0px;margin:0px;}
+
+*{
+	box-sizing: border-box;
+}
+
+input{
+	width: 150px;
+  outline: none;
+}
+
+#trangle{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid rgb(200,200,200);
+    position: absolute;
+    left:135px;
+    top:5px;
+}
+
+ul{
+	border:1px solid rgb(155,155,155);
+	width: 150px;
+	display: none;
+}
+
+li{
+	padding: 4px;
+}
+
+li:hover{
+	background-color: blue;
+	color:white;
+}
+
+
+.white{
+	background-color: white;
+}

@@ -1,0 +1,20 @@
+*{padding: 0px;margin:0px;}
+
+
+#title{
+	text-align: center;
+	font-size: 25px;
+}
+
+#content{
+	margin-top: 35px;
+	text-align: center;
+	color: black;
+}
+
+span{
+	padding: 20px;
+	margin-left: 9px;
+	background-color: yellow;
+    cursor: pointer;
+}
