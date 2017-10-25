@@ -1,0 +1,130 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+  </head>
+
+<body>
+  <fieldset id="form-gra-time">
+    <legend>请选择日期粒度：</legend>
+    <label>日<input name="gra-time" value="day" type="radio" checked="checked"></label>
+    <label>周<input name="gra-time" value="week" type="radio"></label>
+    <label>月<input name="gra-time" value="month" type="radio"></label>
+  </fieldset>
+
+  <fieldset>
+    <legend>请选择查看的城市：</legend>
+    <select id="city-select">
+      <option>北京</option>
+    </select>
+  </fieldset>
+
+  <div id="aqi-chart-wrap">
+  </div>
+
+
+<script type="text/javascript">
+
+ 
+function getDateStr(dat) {
+  var y = dat.getFullYear();
+  var m = dat.getMonth() + 1;
+  m = m < 10 ? '0' + m : m;
+  var d = dat.getDate();
+  d = d < 10 ? '0' + d : d;
+  return y + '-' + m + '-' + d;
+}
+
+function randomBuildData(seed) {
+  var returnData = {};
+  var dat = new Date("2016-01-01");
+  var datStr = '';
+  for (var i = 1; i < 92; i++) {
+    datStr = getDateStr(dat);
+    returnData[datStr] = Math.ceil(Math.random() * seed);
+    dat.setDate(dat.getDate() + 1);
+  }
+  return returnData;
+}
+
+var aqiSourceData = {
+  "北京": randomBuildData(500),
+  "上海": randomBuildData(300),
+  "广州": randomBuildData(200),
+  "深圳": randomBuildData(100),
+  "成都": randomBuildData(300),
+  "西安": randomBuildData(500),
+  "福州": randomBuildData(100),
+  "厦门": randomBuildData(100),
+  "沈阳": randomBuildData(500)
+};
+
+  var pageState = {
+    nowSelectCity: "",
+    nowGraTime: "day"  }
+
+function renderChart() {
+    var chart_wrap = document.getElementById('aqi-chart-wrap'); //获取表格区的内容
+
+    result="";
+   
+     for( var x in aqiSourceData)
+     {
+
+        result += x;
+
+     }
+
+
+    chart_wrap.innerHTML = result;
+
+    }
+
+
+
+function graTimeChange(event) {
+    // 确定是否选项发生了变化 
+    if (pageState["nowGraTime"] == event.target.value) {
+        return false };
+    // 设置对应数据
+    pageState["nowGraTime"] = event.target.value;
+    // 调用图表渲染函数
+    //renderChart()
+    alert(pageState.nowGraTime);
+    renderChart();
+}
+ 
+
+function citySelectChange(e) {
+    // 确定是否选项发生了变化 
+    if (pageState["nowSelectCity"] == e.target.value) {
+        return false };
+    // 设置对应数据
+    pageState["nowSelectCity"] = e.target.value;
+    // 调用图表渲染函数
+    alert(pageState.nowSelectCity);
+    renderChart();
+}
+
+  var x = document.getElementById('form-gra-time');
+  x.addEventListener("change",graTimeChange); 
+
+  var result="";
+  for( var x in aqiSourceData)
+  {    result += "<option>" + x + "</option>"; } //fucking hack!!
+  var y = document.getElementById("city-select");   
+   y.innerHTML = result;
+   y.addEventListener("change",citySelectChange);
+ 
+
+
+
+      
+
+
+</script>
+
+</body>
+
+</html>
