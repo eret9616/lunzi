@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+ <style> .huahua{ width:200px; height:100px; background:yellow;}</style>
+</head>
+<body>
+
+<div id="app1">
+<div class="huahua"  v-pin:true.bottom.right="pin"> <button @click=change>点我</button>sdasds</div>
+</div>
+
+</body>
+
+<script src="vue.js"></script>
+<script>
+
+Vue.directive("pin",function(el,binding){
+            if(binding.value==true)
+            {
+              el.style.position = "absolute";
+
+                    var position = binding.modifiers;
+                    var message = binding.arg;
+
+                     for (var key in position){
+                        if(key)
+                        {
+                            console.log(key);
+                            el.style[key] = '10px';
+                        }
+                     }
+
+                    if(message)
+                    {alert("v-pin:true中的true参数传入了binding的arg属性")}
+
+             }
+             else{el.style.position = "static";}
+})
+
+new Vue({
+  el:"#app1",
+  data:{pin:false},
+  methods:{change:function(){this.pin = !this.pin;}}
+})
+
+
+</script>
+
+</html>

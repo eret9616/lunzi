@@ -1,0 +1,61 @@
+用script引用一个vue .js
+
+var app1 = new Vue({
+   el:"",
+   data:{},
+   methods:{}
+   computed:{  sum:function(){return .....}}
+})
+
+vue中这些东西被称为指令 ：
+
+在input属性中添加 v-model=""
+实现vm层。。
+
+使用v-show(只是单纯的不显示了) v-if(是否搞dom)
+
+v-bind: 修改属性 前面的v-bind可以不写省略成:
+
+v-on： 修改一些事件event  v-on可以不写省略成@   修饰符 有prevent和stop和enter可以阻止默认事件冒泡..和键盘回车事件
+
+
+v-model指令及修饰符: v-model.lazy= （Blur出input时才更新）  v-model.trim= 去掉空格
+
+v-model.number 把输入的内容转换成数字类型 （当然你得输入数字，正常情况下输出的是字符串）
+
+
+computed与methods区别：当其他数据没有发生改变时computed调的是缓存的数据
+	
+
+
+
+
+Vue.component("",{template:`` , ....})
+
+
+Vue.filter("change",function(val,unit){return ...})  {{value|change}}
+
+
+
+Vue.directive("",function(el,binding){  binding.value })
+
+binding有一个modifier属性 对应的是 v-pin.xxx 后面的.xxx
+
+
+
+
+mixins:
+
+var base = { methods:{...}  }
+
+
+mixins:[base];
+mixins放在组件里。
+
+
+
+slot:
+在组件定义中使用 <slot name="xxx"> placeholder </slot>
+
+使用时可以 <div slot="xxx"></div>
+

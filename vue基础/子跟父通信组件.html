@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+<div id="app">
+<balance></balance>
+</div>
+
+
+</body>
+
+<script src="vue.js"></script>
+<script>
+
+Vue.component("balance",{template:`<div>
+                                        <show @showbalance="show_balance"></show>
+                                        <div v-if="show">啊啊啊啊</div>
+                                  </div>`,
+                         data:function(){return {show:false}},
+                         methods:{
+                                show_balance:function(data){
+                                        this.show=true;
+                                        console.log(data);
+                                }
+                         }
+
+                       });
+
+Vue.component("show",{template:`<button @click="fun()">显示余额</button>`,
+                      methods: { fun: function(){this.$emit('showbalance',{a:1,b:2})}}, //注意传参数时候父元素应该写函数名不要写括号
+
+                    });
+
+
+new Vue({
+  el:"#app",
+})
+
+
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+<div id="app">
+
+<input type="text" v-model="length">
+
+{{length|change('meter')}}
+
+</div>
+
+</body>
+
+
+<script src="vue.js"></script>
+<script>
+
+Vue.filter('change',function(val,unit){
+      val = val||0;
+      unit = unit ||"mm";
+      return (val/1000).toFixed(2) + unit;
+})
+
+
+new Vue({
+
+   el:"#app",
+   data:{
+     length:""
+   }
+})
+
+</script>
+</html>

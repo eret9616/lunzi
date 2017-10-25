@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+<style>
+.liked{background:deeppink;}
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<div id="hh">
+
+
+<fucks>
+
+
+</fucks>
+
+
+
+
+</div>
+
+
+
+
+
+</body>
+
+<script src="vue.js"></script>
+<script>
+
+// Vue.component("fucks",{template: '<button :class="{liked:liked}" @click="b()" >点赞{{a}}</button>',
+//                        data:function(){return {liked:false,a:25}},
+//                        methods:{b:function(){if(this.liked==false) this.a++; else this.a--; this.liked=!this.liked  ;}  }
+//                      })
+
+new Vue({
+    el:"#hh",
+    components:{"fucks":{template: '<button :class="{liked:liked}" @click="b()" >点赞{{a}}</button>',
+                           data:function(){return {liked:false,a:25}},
+                           methods:{b:function(){if(this.liked==false) this.a++; else this.a--; this.liked=!this.liked  ;}  }
+                         }}
+
+})
+
+
+
+</script>
+
+</html>
