@@ -1,3 +1,5 @@
-���������õ�ʱ��  ���������ĳһ��������ӵ�У� ��ôthisָ���������
+this是在一个函数被调用时确定的。
 
-��������������ã�thisָ��undefined���ڷ��ϸ�ģʽ��ָ��window
+函数被调用的时候  如果函数被某一个对象所拥有， 那么this指向这个对象。
+
+如果函数独立调用，this指向undefined，在非严格模式下指向window
