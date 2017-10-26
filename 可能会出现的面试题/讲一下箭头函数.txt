@@ -15,11 +15,10 @@ return function(){
 a();
 
 
-这样return的是10。(this是在函数被调用时确定的，当a被调用时，a不被对象拥有，所以这里this是undefiend，因为是非严格模式，这里this是window，即window.x，全局变量x在window中是一个对象 可以在dir(window)中看到x)
+这样return的是10。(this是在函数被调用时确定的，return的这个function不属于任何对象，所以这个function中的this是undefined，在非严格下是window)
 
 
-如果是用 return ()=> this.x | return的是20。 
+如果是用 return ()=> this.x  this是他外面的this
 
 
-原因：箭头函数中this 一直！！指向他的爸爸function！！ 记住这句话就好了 爸爸function 爸爸函数
-
+原因：箭头函数中没有this，如果在箭头函数中使用this，则这个this一定是他外层的this！！
