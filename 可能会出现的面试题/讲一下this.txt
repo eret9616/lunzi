@@ -1,5 +1,43 @@
-this是在一个函数被调用时确定的。
+1.this是在一个函数被调用时确定的。（注意函数这两个大字）
 
-函数被调用的时候  如果函数被某一个对象所拥有， 那么this指向这个对象。
+2.函数被调用的时候  如果函数被某一个对象所拥有， 那么this指向这个对象。
 
-如果函数独立调用，this指向undefined，(“cant ready property of undefinead"),在非严格模式下指向window
+3.如果函数独立调用，this指向undefined,在非严格模式下指向window
+
+4.当this为某个（属性:值）键值对中的值的内容时，先找那个函数，再找那个函数的对象，要是没有函数就是window
+
+关于第四点：
+var obj = {  a:this };
+console.log(obj.a);   <-没有函数，最后找到window
+
+// demo
+var a = 20;
+var obj = {
+    a: 10,
+    c: this.a + 20,                  <--这里的this是window
+    fn: function () {
+        return this.a;               <--函数fn属于obj对象，这里的this是obj
+    }
+}
+
+console.log(obj.c);     
+console.log(obj.fn());
+
+// demo2
+'use strict';
+var a = 20;
+function foo () {
+    var a = 1;
+    var obj = {
+        a: 10, 
+        c: this.a + 20,           <--这里this，先看他在 函数 foo里面，然后foo并不属于任何对象 所以是undefined
+        fn: function () {
+            return this.a;
+        }
+    }
+    return obj.c;
+}
+console.log(foo());    // ？
+console.log(window.foo());  // ? <-- window对象中的foo
+
+ 
