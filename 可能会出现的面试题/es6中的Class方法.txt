@@ -1,0 +1,27 @@
+ // ES5
+// 构造函数
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+
+// 原型方法
+Person.prototype.getName = function() {
+  return this.name
+}
+
+
+
+// ES6
+class Person {
+  constructor(name, age) {  // 构造函数
+    this.name = name;
+    this.age = age;
+  }
+  
+
+  getName() {  // 原型方法
+    return this.name
+  }
+}
