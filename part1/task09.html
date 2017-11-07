@@ -1,334 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>task09 Ê¹ÓÃHTML/CSSÊµÏÖÒ»¸ö¸´ÔÓÒ³Ãæ</title>
-    <link rel="stylesheet" type="text/css" href="task09.min.css">
+<meta charset="utf-8">
+	<title></title>
+<style type="text/css">
+
+body{
+    font-size: "Microsoft YaHei"ï¼›
+	padding: 0px; margin: 0px;
+}
+
+.header{
+background-color: rgb(33,137,192);
+height: 58px;
+width: 100%;
+position: relative;
+}
+
+#topleft{
+
+	height: 34px;
+	width: 34px;
+	background-color: white;
+	position: relative;
+	top:12px;
+	left: 34px;
+
+}
+
+#topleft2{
+     
+    height: 11px;
+    width: 11px;
+    background-color: white;
+    border:3px solid rgb(33,137,192);
+    position: relative;
+    top:-2px;
+    left: 54px;
+
+
+}
+
+
+.search{
+
+	background-color: white;
+	border-radius:10px; 
+	height:26px;
+	width: 18%;
+	position: absolute;
+	right: 95px;
+	top:17px;
+}
+
+.left{
+float: left;
+height: 1000px;
+background-color: rgb(43,46,61);
+width: 260px;
+}
+
+.right{
+	 
+	height: 1000px;
+	background-color: rgb(238,238,238);
+    margin-left: 260px;   
+}
+
+
+.avatar
+{
+
+ margin-top: 50px;
+}
+
+.avatar ul li{
+	display: inline;
+    font-size: 24px;
+}
+
+.avatar ul li a{
+		color: white;
+	text-decoration: none;
+}
+
+.function ul li
+{
+
+	   font-size: 19px;
+}
+
+
+.function ul li a{
+		color: white;
+	text-decoration: none;
+}
+
+.righttop
+{
+background-color: white;
+height:29px;
+}
+
+
+.right1{
+
+width: 90%;
+height: 200px;
+background-color: white;
+border:1px solid rgb(221,222,224);
+margin-left: 6%;
+margin-top: 3%;
+}
+
+
+
+</style>
+
+
+
 </head>
 
 <body>
-    <div class="header">
-        <img src="img/logo.png" alt="logo" />
-        <input type="text" name="search" />
-        <a href="#"><img src="img/task09-header01.png" alt="login">µÇÂ¼</a>
-    </div>
-    <div class="wrapper">
-        <div class="aside">
-            <div class="aside-top">
-                <img src="img/pjy.jpg" alt="photo">
-                <span>pkjy</span>
-            </div>
-            <div class="aside-hint">
-                <ul>
-                    <li><span>666</span><br><span>ÊÕ²Ø</span></li>
-                    <li><span>233</span><br><span>·ÛË¿</span></li>
-                </ul>
-            </div>
-            <ul class="aside-icon">
-                <li><img src="img/task09-aside09.png" alt="aside-icon" /><a href="#">¸öÈË±¨±í</a></li>
-                <li class="aside-icon-dt"><img src="img/task09-aside01.png" alt="aside-icon">ÎÄ¼ş¼ĞÒ»</li>
-                <li class="aside-icon-dt"><img src="img/task09-aside02.png" alt="aside-icon">ÎÄ¼ş¼Ğ¶ş</li>
-                <li class="aside-icon-dd"><img src="img/task09-aside05.png" alt="aside-icon">ÎÄµµ1</li>
-                <li class="aside-icon-dd"><img src="img/task09-aside06.png" alt="aside-icon">ÎÄµµ1</li>
-                <li class="aside-icon-dt"><img src="img/task09-aside01.png" alt="aside-icon">ÎÄ¼ş¼ĞÈı</li>
-                <li><img src="img/task09-aside07.png" alt="aside-icon" />¸öÈËÊÕ²Ø</li>
-                <li><img src="img/task09-aside10.png" alt="aside-icon" />ÎÒµÄ·ÖÏí</li>
-                <li><img src="img/task09-aside07.png" alt="aside-icon" />Í¼¿â</li>
-                <li><img src="img/task09-aside07.png" alt="aside-icon" />³É³¤¼ÇÂ¼</li>
-                <li><img src="img/task09-aside03.png" alt="aside-icon" />ÕË»§ĞÅÏ¢</li>
-            </ul>
-        </div>
-        <div class="main">
-            <div class="main-header">
-                <span>cÕ¾</span>/<span>¸öÈË±¨±í</span>/<span>ÎÄ¼şÒ»</span>/<span>ÎÄµµÒ»</span>
-            </div>
-            <div class="main-part01">
-                <div class="main-part01-box">
-                    <label for="box">²éÑ¯Ïî</label>
-                    <select id="box">
-                        <option>µÚÒ»Ïî</option>
-                        <option>µÚ¶şÏî</option>
-                        <option>µÚÈıÏî</option>
-                    </select>
-                </div>
-                <div class="main-part01-box">
-                    <label for="buyer">Âò·½</label>
-                    <select id="buyer">
-                        <option>Ğ¡A</option>
-                        <option>Ğ¡Íõ</option>
-                        <option>Ğ¡°Ë</option>
-                    </select>
-                    <label for="seller">Âô·½</label>
-                    <select id="seller">
-                        <option value="one">Ğ¡C</option>
-                        <option value="two">Ğ¡Èı</option>
-                        <option value="three">Ğ¡ËÄ</option>
-                    </select>
-                </div>
-                <div class="main-part01-box main-part01-box-mark">
-                    <label for="date">ÈÕÆÚ</label>
-                    <input type="text" id="date" value="2016-04-01" name="date">
-                    <label for="time">×ÜºÄÊ±</label>
-                    <select id="time">
-                        <option value="8">8Ìì</option>
-                        <option value="12">12Ìì</option>
-                        <option value="14">14Ìì</option>
-                    </select>
-                    <br>
-                    <label for="number">ÈËÊı</label>
-                    <select id="number">
-                        <option value="number1">10ÈË</option>
-                        <option value="number2">12ÈË</option>
-                        <option value="number3">14ÈË</option>
-                    </select>
-                    <label for="deal">³É½»Ïî</label>
-                    <select id="deal">
-                        <option value="deal1">10ÈË</option>
-                        <option value="deal2">12ÈË</option>
-                        <option value="deal3">14ÈË</option>
-                    </select>
-                    <br>
-                </div>
-                <input type="button" value="ËÑË÷" name="search" />
-            </div>
-            <ul class="main-part02">
-                <li class="main-part02-btn main-part02-btn-left">
-                    <a href="#">a</a>
-                </li>
-                <li class="main-part02-class"><span class="main-part02-time">10:00 am</span>
-                    <br>£¤<span class="main-part02-price">1200</span></li>
-                <li class="main-part02-class"><span class="main-part02-time">11:00 am</span>
-                    <br>£¤<span class="main-part02-price">1200</span></li>
-                <li class="main-part02-class"><span class="main-part02-time">12:00 am</span>
-                    <br>£¤<span class="main-part02-price">1200</span></li>
-                <li class="main-part02-class"><span class="main-part02-time">01:00 pm</span>
-                    <br>£¤<span class="main-part02-price">1200</span></li>
-                <li class="main-part02-class"><span class="main-part02-time">02:00 pm</span>
-                    <br>£¤<span class="main-part02-price">1200</span></li>
-                <li class="main-part02-class"><span class="main-part02-time">03:00 pm</span>
-                    <br>£¤<span class="main-part02-price">1200</span></li>
-                <li class="main-part02-btn main-part02-btn-right">
-                    <a href="#">a</a>
-                </li>
-                <li class="main-part02-search">
-                    <a href="#"><img src="img/task09-mainpart02-03.png" alt="little-icon"><span>ÀúÊ·²éÑ¯</span></a>
-                </li>
-            </ul>
-            <div class="main-part03">
-                <p class="main-part03-title">2016Äê4ÔÂ·İÍ³¼Æ</p>
-                <ul class="main-part03-ul">
-                    <li class="">
-                        <p>133311</p><span>³É½»Á¿</span></li>
-                    <li class="">
-                        <p>133311</p><span>³É½»Á¿</span></li>
-                    <li class="">
-                        <p>133311</p><span>³É½»Á¿</span></li>
-                    <li class="">
-                        <p>133311</p><span>³É½»Á¿</span></li>
-                </ul>
-            </div>
-            <div class="main-part04 fl">
-                <p class="main-part04-title">µÚÒ»×éÏîÄ¿</p>
-                <ul class="main-part04-project">
-                    <li id="project01"><a href="#project01">ÏîÄ¿Ò»</a></li>
-                    <li id="project02"><a href="#project02">ÏîÄ¿¶ş</a></li>
-                    <li id="project03"><a href="#project03">ÏîÄ¿Èı</a></li>
-                    <li id="project04"><a href="#project04">ÏîÄ¿ËÄ</a></li>
-                    <li id="project05"><a href="#project05">ÏîÄ¿Îå</a></li>
-                </ul>
-                <table class="main-part04-detail">
-                    <tbody>
-                        <tr>
-                            <td>¹ºÂò²ÄÁÏÒ»</td>
-                            <td>¹ºÂò²ÄÁÏÒ»</td>
-                            <td>¹ºÂò²ÄÁÏÒ»</td>
-                            <td>¹ºÂò²ÄÁÏÒ»</td>
-                        </tr>
-                        <tr>
-                            <td>¹ºÂò²ÄÁÏ¶ş</td>
-                            <td>¹ºÂò²ÄÁÏ¶ş</td>
-                            <td>¹ºÂò²ÄÁÏ¶ş</td>
-                            <td>¹ºÂò²ÄÁÏ¶ş</td>
-                        </tr>
-                        <tr>
-                            <td>¹ºÂò²ÄÁÏËÄ</td>
-                            <td>¹ºÂò²ÄÁÏËÄ</td>
-                            <td>¹ºÂò²ÄÁÏËÄ</td>
-                            <td>¹ºÂò²ÄÁÏËÄ</td>
-                        </tr>
-                        <tr>
-                            <td>¹ºÂò²ÄÁÏÊ®¶ş</td>
-                            <td>¹ºÂò²ÄÁÏÊ®¶ş</td>
-                            <td>¹ºÂò²ÄÁÏÊ®¶ş</td>
-                            <td>¹ºÂò²ÄÁÏÊ®¶ş</td>
-                        </tr>
-                        <tr>
-                            <td>¹ºÂò²ÄÁÏ¶şÊ®Áù</td>
-                            <td>¹ºÂò²ÄÁÏ¶şÊ®Áù</td>
-                            <td>¹ºÂò²ÄÁÏ¶şÊ®Áù</td>
-                            <td>¹ºÂò²ÄÁÏ¶şÊ®Áù</td>
-                        </tr>
-                        <tr>
-                            <td>¹ºÂò²ÄÁÏÈıÊ®</td>
-                            <td>¹ºÂò²ÄÁÏÈıÊ®</td>
-                            <td>¹ºÂò²ÄÁÏÈıÊ®</td>
-                            <td>¹ºÂò²ÄÁÏÈıÊ®</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="main-part05 fl">
-                <p class="main-part05-title">µÚ¶ş×éÏîÄ¿</p>
-                <ul class="main-part05-ul">
-                    <li><span>±êÌâ</span>
-                        <p>ÏîÄ¿±¨±íÈı</p>
-                    </li>
-                    <li class="main-part05-ul-li">
-                        <p class="main-part05-price"><span>¼Û¸ñ</span>
-                            <br>£¤158</p>
-                        <p class="main-part05-manager"><span>¸ºÔğÈË</span>
-                            <br>Ğ¡A</p>
-                    </li>
-                    <li>
-                        <span>ÏêÏ¸ÃèÊö</span>
-                        <p>¸ÃÏîÄ¿Ä¿Ç°¸ºÔğÈËÊÇ....</p>
-                    </li>
-                </ul>
-                <div class="main-part05-bottom">
-                    <input type="checkbox" checked="checked"><span>×ñÊØ±£ÃÜĞ­Òé</span>
-                    <input type="button" value="ËÑË÷" class="search-btn" />
-                </div>
-            </div>
-            <div class="main-part06 fl">
-                <p class="main-part06-title">ÈÕÀú</p>
-                <div class="main-part06-header">
-                    <span>2016</span>
-                    <span>4ÔÂ</span>
-                    <span>±ê×¢ÈÕÆÚ</span>
-                    <span>·µ»Ø½ñÌì</span>
-                </div>
-                <ul class="main-part06-middle">
-                    <li>Ò»</li>
-                    <li>¶ş</li>
-                    <li>Èı</li>
-                    <li>ËÄ</li>
-                    <li>Îå</li>
-                    <li>Áù</li>
-                    <li>ÈÕ</li>
-                </ul>
-                <ul class="main-part06-bottom">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li>1
-                        <br><span class="festival">ÓŞÈË½Ú</span></li>
-                    <li><span class="weekend">2</span>
-                        <br>Ø¥Îå</li>
-                    <li><span class="weekend">3</span>
-                        <br>Ø¥Áù</li>
-                    <li><span>4<br>Ø¥Æß</span></li>
-                    <li><span class="festival">5<br>ÇåÃ÷</span></li>
-                    <li><span>6<br>Ø¥¾Å</span></li>
-                    <li><span>7<br>ÈıÔÂ</span></li>
-                    <li><span>8<br>³õ¶ş</span></li>
-                    <li class="main-part06-choosed"><span class="weekend">9</span>
-                        <br>³õÈı</li>
-                    <li><span class="weekend">10<br>³õËÄ</span></li>
-                    <li><span>11<br>³õÎå</span></li>
-                    <li class="main-part06-choosed"><span>12<br>³õÁù</span></li>
-                    <li><span>13<br>³õÆß</span></li>
-                    <li><span>14<br>³õ°Ë</span></li>
-                    <li><span>15<br>³õ¾Å</span></li>
-                    <li><span class="weekend">16</span>
-                        <br>³õÊ®</li>
-                    <li><span class="weekend">17</span>
-                        <br>Ê®Ò»</li>
-                    <li><span>18<br>Ê®¶ş</span></li>
-                    <li class="main-part06-choosed"><span>19<br>Ê®Èı</span></li>
-                    <li><span>20<br>Ê®ËÄ</span></li>
-                    <li><span>21<br>Ê®Îå</span></li>
-                    <li><span>22<br>Ê®Áù</span></li>
-                    <li><span class="weekend">23</span>
-                        <br>Ê®Æß</li>
-                    <li><span class="weekend">24</span>
-                        <br>Ê®°Ë</li>
-                    <li><span>25<br>Ê®¾Å</span></li>
-                    <li><span>26<br>Ø¥Ê®</span></li>
-                    <li><span>27<br>Ø¥Ò»</span></li>
-                    <li><span>28<br>Ø¥¶ş</span></li>
-                    <li><span>29<br>Ø¥Èı</span></li>
-                    <li><span class="weekend">30</span>
-                        <br>Ø¥ËÄ</li>
-                </ul>
-            </div>
-            <div class="main-part07 fl">
-                <p class="main-part07-title">Æû³µĞĞÒµÆ·ÅÆ°ñ</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ÅÅÃû</th>
-                            <th>Æ·ÅÆ</th>
-                            <th>ËÑË÷Ö¸Êı</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>´óÖÚ</td>
-                            <td>4231232<span class="main-part07-img"><i class="top1"></i></span></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>·áÌï</td>
-                            <td>293073333<span class="main-part07-img"><i class="top2"></i></span></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>°ÂµÏ</td>
-                            <td>231390704<span class="main-part07-img"><i class="top3"></i></span></td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>±¾Ìï</td>
-                            <td>22885564<span class="main-part07-img"><i class="top4"></i></span></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>¸£ÌØ</td>
-                            <td>22324792<span class="main-part07-img"><i class="top5"></i></span></td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>±¦Âí</td>
-                            <td>21444077<span class="main-part07-img"><i class="top6"></i></span></td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>ÏÖ´ú</td>
-                            <td>20114969<span class="main-part07-img"><i class="top7"></i></span></td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>ÆğÑÇ</td>
-                            <td>19251680<span class="main-part07-img"><i class="top8"></i></span></td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>±¼³Û</td>
-                            <td>19172837<span class="main-part07-img"><i class="top9"></i></span></td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>±ğ¿Ë</td>
-                            <td>18544027<span class="main-part07-img"><i class="top10"></i></span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</body>
 
+
+<div class="header">
+
+<div id="topleft"></div>
+<div id="topleft2"></div>
+
+<div class="search">
+
+</div>
+<span><a href="#" style="color: white; text-decoration: none; position: absolute;
+right: 45px; top: 20px;
+">ç™»å½•</a></span>
+</div>
+
+<div class="left">
+
+<div class="avatar">
+
+<ul>
+<li><a href="#"> æ”¶è—</a></li>
+<li><a href="#"> ç²‰ä¸</a></li>
+</ul>
+</div>
+
+<div class="function">
+<ul>
+<li><a href="#"> ä¸ªäººæŠ¥è¡¨</a></li>
+<li><a href="#"> ä¸ªäººæ”¶è—</a></li>
+<li><a href="#"> æˆ‘çš„åˆ†äº«</a></li>
+<li><a href="#"> å›¾åº“</a></li>
+<li><a href="#"> æˆé•¿è®°å½•</a></li>
+<li><a href="#"> è´¦æˆ·ä¿¡æ¯</a></li>
+</ul>
+
+
+</div>
+
+
+</div>
+
+<div class="right">
+
+<div class="righttop"></div>
+<div class="right1">
+
+<div style="margin-top: 20px; margin-left: 25px;">
+<label for="query" style="color: rgb(182,182,182);">æŸ¥è¯¢é¡¹</label>
+<select style=" " name="query">
+<option>ç¬¬ä¸€é¡¹</option>
+<option>ç¬¬äºŒé¡¹</option>
+</select>
+</div>
+
+<input style="border:0; color: white; background-color: rgb(56,138,188); width: 60px; margin-left: 80px; margin-top: 10px;" type="button" name="" value="æœç´¢">
+
+
+
+</div>
+
+
+</div>
+
+</body>
 </html>
